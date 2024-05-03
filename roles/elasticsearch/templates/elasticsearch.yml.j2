@@ -103,6 +103,7 @@ discovery.type: "single-node"
 # ---------------------------------- Security -----------------------------------
 
 {% if elasticsearch_security_enabled %}
+xpack.security.enabled: true
 xpack.security.transport.ssl.enabled: true
 xpack.security.transport.ssl.verification_mode: certificate 
 xpack.security.transport.ssl.client_authentication: required
