@@ -81,7 +81,6 @@ http.port: 9200
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
 {% if groups['elasticsearch'] | length > 1  %}
-discovery.type: "multi-node"
 discovery.seed_hosts:
 {% for host in groups['elasticsearch'] %}
   - {{ host }}
