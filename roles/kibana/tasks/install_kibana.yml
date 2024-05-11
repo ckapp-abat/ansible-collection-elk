@@ -73,7 +73,7 @@
 
 - name: create symlink to kibana
   ansible.builtin.file:
-    src: "{{ kibana_extract_dir }}/kibana-{{ kibana_version }}"
+    src: "{{ kibana_extract_dir }}/kibana-{{ kibana_version }}-{{ unames.stdout | lower }}-{{ unamem.stdout }}"
     dest: "{{ kibana_extract_dir }}/kibana"
     state: link
     owner: "{{ kibana_user }}"
